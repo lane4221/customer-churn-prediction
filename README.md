@@ -1,21 +1,21 @@
 # Customer Churn Prediction
 
 ## Project Description
-This project predicts which customers of a telecom company are likely to leave (churn) using a logistic regression model. It uses the Telco Customer Churn dataset from Kaggle, which has 7,043 customers and 21 features covering demographics, services, and account info. The goal is to help the company find at-risk customers early so they can try to keep them.
+This project predicts which customers are likely to leave a telecom company using logistic regression. I used the Telco Customer Churn dataset from Kaggle, which has 7,043 customers.
 
 ## Files
-- LastName_FirstName_IN503_Unit10_Assignment.ipynb – the full notebook with data exploration, preprocessing, model training, and evaluation
-- customer_churn_model.pkl – the saved trained model pipeline
+- Meadows_Lane_IN503_Unit10_Assignment.ipynb – the notebook with all the code
+- customer_churn_model.pkl – the saved model
 
 ## Installation
-1. Clone the repository:
+1. Clone the repo:
    git clone https://github.com/YOUR-USERNAME/customer-churn-prediction.git
-2. Install the required packages:
+2. Install the packages:
    pip install pandas numpy matplotlib seaborn scikit-learn joblib kagglehub
-3. Open the notebook in Google Colab or Jupyter Notebook and run all cells.
+3. Open the notebook in Google Colab and run all the cells.
 
 ## Usage
-Load the saved model and predict churn for a new customer:
+Load the model and predict if a new customer will leave:
 
     import joblib
     import pandas as pd
@@ -35,11 +35,11 @@ Load the saved model and predict churn for a new customer:
     print('Churn' if prediction[0] == 1 else 'No Churn')
 
 ## Key Findings
-- Contract type: Month-to-month customers churn the most. Longer contracts keep people around.
-- Internet service: Fiber optic customers churn more than DSL or no-internet customers.
-- Tenure: New customers are the most likely to leave. The longer someone stays, the less likely they are to churn.
-- Pricing: Higher monthly charges are linked to more churn.
-- Model performance: Accuracy of __%, with __ precision and __ recall for churned customers.
+- Month-to-month customers leave the most
+- Fiber optic customers leave more than DSL or no-internet customers
+- Newer customers are the most likely to leave
+- Higher monthly charges go with more churn
+- The model got 80.38% accuracy, 0.65 precision, and 0.57 recall for churn
 
 ## Dependencies
 - Python 3
